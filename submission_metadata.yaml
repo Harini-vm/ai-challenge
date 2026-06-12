@@ -13,7 +13,7 @@ team_members:
     email: "todo@example.com"
     role: "Team Lead / ML Engineer"
 
-github_repo: "https://github.com/TODO_USERNAME/redrob-ranker"
+github_repo: "https://github.com/Harini-vm/ai-challenge"
 
 sandbox_link: "https://TODO-your-app.streamlit.app"
 # Streamlit app (app.py in this repo). Deploy via Streamlit Cloud free tier:
