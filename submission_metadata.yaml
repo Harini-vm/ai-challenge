@@ -1,16 +1,16 @@
 # Redrob Hackathon — Submission Metadata
 # Mirrors portal metadata. Fill in the placeholders marked TODO before submitting.
 
-team_name: "TODO-your-team-name"
+team_name: "Team Flyhigh"
 
 primary_contact:
-  name: "TODO Full Name"
-  email: "todo@example.com"
-  phone: "+91-XXXXXXXXXX"
+  name: "Harini V M"
+  email: "harinivm77@gmail.com"
+  phone: "+91-8925617454"
 
 team_members:
-  - name: "TODO Full Name"
-    email: "todo@example.com"
+  - name: "Harini V M"
+    email: "harinivm77@gmail.com"
     role: "Team Lead / ML Engineer"
 
 github_repo: "https://github.com/Harini-vm/ai-challenge"
