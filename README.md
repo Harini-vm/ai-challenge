@@ -99,6 +99,11 @@ streamlit run app.py
 Upload any JSONL sample (≤100 candidates) and the app runs the identical
 pipeline (same modules, no divergence) and offers the ranked CSV for download.
 
+A ready-made demo file ships in the repo: [`sample_candidates_100.jsonl`](sample_candidates_100.jsonl)
+— 100 real records from the pool mixing 20 strong candidates, 6 honeypots,
+3 keyword stuffers, and 71 random profiles. Upload it to watch the gates
+exclude the honeypots and the ranking surface the genuine fits.
+
 ## Tests
 
 ```bash
