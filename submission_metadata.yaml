@@ -15,9 +15,10 @@ team_members:
 
 github_repo: "https://github.com/Harini-vm/ai-challenge"
 
-sandbox_link: "https://TODO-your-app.streamlit.app"
-# Streamlit app (app.py in this repo). Deploy via Streamlit Cloud free tier:
-# share.streamlit.io -> New app -> point at this repo, main file app.py.
+sandbox_link: "https://ai-challenge-lcx69p3p2yjieb4ajmhrar.streamlit.app/"
+# Streamlit app (app.py in this repo), deployed on Streamlit Cloud.
+# Upload a JSONL sample (<=100 candidates); the identical pipeline modules
+# rank it and return the CSV.
 
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
