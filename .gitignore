@@ -7,3 +7,6 @@ sample10k.jsonl
 out_tmp.csv
 .venv/
 venv/
+docs/node_modules/
+docs/qa/
+docs/package*.json
