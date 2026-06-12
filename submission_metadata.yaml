@@ -1,0 +1,70 @@
+# Redrob Hackathon — Submission Metadata
+# Mirrors portal metadata. Fill in the placeholders marked TODO before submitting.
+
+team_name: "TODO-your-team-name"
+
+primary_contact:
+  name: "TODO Full Name"
+  email: "todo@example.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "TODO Full Name"
+    email: "todo@example.com"
+    role: "Team Lead / ML Engineer"
+
+github_repo: "https://github.com/TODO_USERNAME/redrob-ranker"
+
+sandbox_link: "https://TODO-your-app.streamlit.app"
+# Streamlit app (app.py in this repo). Deploy via Streamlit Cloud free tier:
+# share.streamlit.io -> New app -> point at this repo, main file app.py.
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Windows laptop"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.12.6"
+  os: "Windows 11 Home"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude (Claude Code) as a pair programmer for data exploration,
+  architecture discussion, implementation, and profiling/optimization of the
+  ranking pipeline. All design decisions (evidence-over-skill-list principle,
+  honeypot consistency checks, multiplicative availability model, weights)
+  were iterated and validated against the dataset locally. No candidate data
+  was sent to any hosted LLM during ranking; the ranking step makes no network
+  calls of any kind.
+
+methodology_summary: |
+  Evidence-first hybrid ranker. A streaming pass over the 100K pool applies
+  (1) a title prescreen implementing the JD's explicit non-engineering rule,
+  (2) honeypot gates built on internal-consistency checks (job duration vs
+  its own dates, claimed YoE vs dated career span, expert skills with zero
+  use), (3) concept-lexicon evidence extraction over career-history prose —
+  never the self-reported skill list — covering retrieval, ranking,
+  evaluation, LLM, NLP/IR, production, LTR, open-source, and HR-tech domain,
+  weighted by recency and product-company context, (4) structural fit (YoE
+  trapezoid for the 5-9y band, penalties mirroring every JD disqualifier:
+  research-only, services-only, CV/speech-primary, shallow-LLM recency,
+  title-chasing, non-coding titles, uncorroborated skill stuffing), and
+  (5) a multiplicative availability model from behavioral signals
+  (last-active, recruiter response rate, interview completion, notice,
+  location/visa). TF-IDF cosine to the JD refines the top-1500 shortlist at a
+  15% blend. Reasonings are generated from each candidate's extracted
+  evidence terms and real concerns. Full run: ~95s, CPU-only, no network.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
