@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+candidates.jsonl
+candidates.jsonl.gz
+sample10k.jsonl
+out_tmp.csv
+.venv/
+venv/
